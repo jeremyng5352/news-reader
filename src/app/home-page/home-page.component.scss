@@ -1,0 +1,11 @@
+.row {
+    padding: 2rem;
+    .news-card {
+        padding: 0;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
