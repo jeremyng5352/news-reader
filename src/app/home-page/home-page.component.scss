@@ -1,9 +1,16 @@
 .row {
     padding: 2rem;
     .news-card {
-        padding: 0;
+        // padding: 0;
         cursor: pointer;
         transition: all 0.3s;
+        border-radius: 5px;
+        .card-image {
+            img {
+                border-top-right-radius: 5px !important;
+                border-top-left-radius: 5px !important;
+            }
+        }
         &:hover {
             opacity: 0.8;
         }
