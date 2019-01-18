@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { NewsCardComponent } from './home-page/news-card/news-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    HomePageComponent,
+    NewsCardComponent
   ],
   imports: [
     BrowserModule,
