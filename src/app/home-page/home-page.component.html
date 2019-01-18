@@ -1,8 +1,23 @@
 <div id="news-page">
     <nav class="navbar navbar-expand-lg navbar-dark blue scrolling-navbar">
         <div class="navbar-brand" routerLink="/home"><strong>News Reader</strong></div>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item mr-2" (click)="currentTab = 'world'" [class.active]="currentTab === 'world'">
+                <a class="nav-link">World</a>
+            </li>
+            <li class="nav-item mr-2" (click)="currentTab = 'queensland'" [class.active]="currentTab === 'queensland'">
+                <a class="nav-link">Queensland</a>
+            </li>
+            <li class="nav-item" (click)="currentTab = 'technology'" [class.active]="currentTab === 'technology'">
+                <a class="nav-link">Technology</a>
+            </li>
+        </ul>
     </nav>
-    <section class="dashboard container-fluid">
+    <!-- World Tab  -->
+    <section class="dashboard container-fluid" *ngIf="currentTab === 'world'">
+        <div class="row" style="text-transform: capitalize; font-weight: normal; color: #2196f3; padding-bottom: 0;">
+            <h1>{{currentTab}}</h1>
+        </div>
         <div class="row">
             <div class="col-2">
                 <mdb-card class="news-card">
@@ -21,4 +36,53 @@
             </div>
         </div>
     </section>
+    <!-- End of World Tab -->
+    <!-- Queensland Tab  -->
+    <section class="dashboard container-fluid" *ngIf="currentTab === 'queensland'">
+        <div class="row" style="text-transform: capitalize; font-weight: normal; color: #2196f3; padding-bottom: 0;">
+            <h1>{{currentTab}}</h1>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <mdb-card class="news-card">
+                    <!--Card image-->
+                    <mdb-card-img class="card-image" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg" alt="Card image cap"></mdb-card-img>
+                    <!--Card content-->
+                    <mdb-card-body>
+                        <!--Title-->
+                        <mdb-card-title>
+                            <h4>Card Title</h4>
+                        </mdb-card-title>
+                        <!--Text-->
+                        <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's content.</mdb-card-text>
+                    </mdb-card-body>
+                </mdb-card>
+            </div>
+        </div>
+    </section>
+    <!-- End of Queensland Tab -->
+    <!-- Technology Tab  -->
+    <section class="dashboard container-fluid" *ngIf="currentTab === 'technology'">
+        <div class="row" style="text-transform: capitalize; font-weight: normal; color: #2196f3; padding-bottom: 0;">
+            <h1>{{currentTab}}</h1>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <mdb-card class="news-card">
+                    <!--Card image-->
+                    <mdb-card-img class="card-image" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg" alt="Card image cap"></mdb-card-img>
+                    <!--Card content-->
+                    <mdb-card-body>
+                        <!--Title-->
+                        <mdb-card-title>
+                            <h4>Card Title</h4>
+                        </mdb-card-title>
+                        <!--Text-->
+                        <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's content.</mdb-card-text>
+                    </mdb-card-body>
+                </mdb-card>
+            </div>
+        </div>
+    </section>
+    <!-- End of technology Tab -->
 </div>
